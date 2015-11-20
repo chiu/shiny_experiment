@@ -18,3 +18,4 @@ shinyServer(function(input, output) {
     hist(x, breaks = bins, col = 'darkgray', border = 'white')
   })
 })
+
