@@ -6,7 +6,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       h1("Installation"),
       p("Shiny is available in CRAN..."),
-      code("install.pack..."),
+      code('install.packages("shiny")'),
       br(),
       img(
         src = "bigorb.png",
