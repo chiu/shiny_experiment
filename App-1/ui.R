@@ -26,12 +26,15 @@ shinyUI(fluidPage(
       p("some cool stuff"),
       tags$ul(
         tags$li("First list item"),
-        tags$li(
-          HTML(paste("E = mc", tags$sup(2), sep = "")), 
-          HTML(paste("H", tags$sub(2), "0", sep = "")),
-          HTML(paste("something ", tags$b("bold text "), sep = "", "so cool"))
-          
-          ),
+        tags$li(HTML(paste(
+          "E = mc", tags$sup(2), sep = ""
+        )),
+        HTML(paste(
+          "H", tags$sub(2), "0", sep = ""
+        )),
+        HTML(
+          paste("something ", tags$b("bold text "), sep = "", "so cool")
+        )),
         tags$li("Third list item")
       )
       ## <ol>
