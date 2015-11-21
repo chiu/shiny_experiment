@@ -8,17 +8,25 @@ shinyUI(fluidPage(
       p("Shiny is available in CRAN..."),
       code('install.packages("shiny")'),
       br(),
+      br(),
+      br(),
+      br(),
       img(
         src = "bigorb.png",
-        height = 40,
-        width = 40
+        height = 70,
+        width = 70
       ),
-      div("shiny is a product of"),
-      a(href = "https://www.rstudio.com", "Rstudio")
+      "shiny is a product of",
+      a(href = "https://www.rstudio.com", "Rstudio", style = "color:green")
     ),
     mainPanel(
       h1("Introducing Shiny"),
-      p("Shiny something somethings"),
+      p(
+        "Shiny something somethings makes it",
+        em("incredibly easy"),
+        "to build interactive web apps with r."
+      ),
+      
       
       
       br(),
