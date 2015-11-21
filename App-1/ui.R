@@ -1,8 +1,14 @@
-library(shiny)
+# ui.R
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
+  titlePanel("cool wow title panel"),
   
-
+  sidebarLayout(
+    sidebarPanel( "sidebar page panel"),
+    mainPanel("main page panel")
+    
+    
+  )
+  
   
 ))
