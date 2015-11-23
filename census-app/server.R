@@ -27,6 +27,6 @@ shinyServer(function(input, output) {
                    "Percent Asian" = counties$asian
     )
                    
-    percent_map( var = data , "darkgreen", "% white" )
+    percent_map( var = data , "darkgreen", legend.title = input$var , input$range[1], input$range[2])
   })
 })
