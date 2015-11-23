@@ -12,8 +12,8 @@ shinyUI(fluidPage(
         label = "Choose a variable to display",
         choices = list(
           "Percent White",
-          "Percent Black" ,
-          "Percent Hispanic" ,
+          "Percent Black",
+          "Percent Hispanic",
           "Percent Asian"
         ),
         selected = "Percent White"
