@@ -10,7 +10,7 @@ shinyUI(fluidPage(
       selectInput(
         "var",
         label = "Choose a variable to display",
-        choices = list(
+        choices = c(
           "Percent White",
           "Percent Black",
           "Percent Hispanic",
