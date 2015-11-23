@@ -29,6 +29,9 @@ shinyUI(fluidPage(
     ),
     
     mainPanel(textOutput("text1"),
-              textOutput("text2"))
+              textOutput("text2"),
+              plotOutput("map")
+              )
+    
   )
 ))
