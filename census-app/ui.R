@@ -20,6 +20,7 @@ shinyUI(fluidPage(
       ),
       
       sliderInput(
+        
         "range",
         label = "Range of interest:",
         min = 0,
