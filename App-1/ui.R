@@ -59,7 +59,7 @@ shinyUI(fluidPage(
     
     column(3,
            selectInput("select", label = h3("Select box"), 
-                       choices = list("Choice wowee" = "wow", "Choice 2" = 2,
+                       choices = list("Choice wowee" = 77, "Choice 2" = 2,
                                       "Choice 3" = 3), selected = 2)),
     
     column(3, 
