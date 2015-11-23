@@ -5,7 +5,9 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       h1("Installation"),
-      p("Shiny is available in CRAN so you can install it the usual way from your..."),
+      p(
+        "Shiny is available in CRAN so you can install it the usual way from your..."
+      ),
       code('install.packages("shiny")'),
       br(),
       br(),
@@ -27,14 +29,16 @@ shinyUI(fluidPage(
         "to build interactive web apps with R."
       ),
       br(),
-      p("For an introducation and live examples, visit the",
-      a(href = "https://www.rstudio.com", "Shiny homepage")
+      p(
+        "For an introducation and live examples, visit the",
+        a(href = "https://www.rstudio.com", "Shiny homepage")
       ),
       br(),
       h2("Features"),
-    
       tags$ul(
-        tags$li("Build useful web applications with only a few lines of code -- no JS required"),
+        tags$li(
+          "Build useful web applications with only a few lines of code -- no JS required"
+        ),
         tags$li(HTML(paste(
           "E = mc", tags$sup(2), sep = ""
         )),
@@ -44,13 +48,12 @@ shinyUI(fluidPage(
         HTML(
           paste("something ", tags$b("bold text "), sep = "", "so cool")
         )),
-        tags$li("Shiny applications are automatically live in the way way that",  strong("spreadsheets"), "are live. Outputs change instantly as users modify...")
+        tags$li(
+          "Shiny applications are automatically live in the way way that",
+          strong("spreadsheets"),
+          "are live. Outputs change instantly as users modify..."
+        )
       )
-      ## <ol>
-      ##   <li>First list item</li>
-      ##   <li>Second list item</li>
-      ##   <li>Third list item</li>
-      ## </ol>
     )
   )
 ))
