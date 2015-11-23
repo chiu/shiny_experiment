@@ -28,9 +28,7 @@ shinyUI(fluidPage(
       )
     ),
     
-    mainPanel(
-      "cool",
-      textOutput("text1")
-    )
+    mainPanel(textOutput("text1"),
+              textOutput("text2"))
   )
 ))
