@@ -2,9 +2,11 @@
 
 shinyUI(fluidPage(
   titlePanel("censusVis"),
+  
   sidebarLayout(
     sidebarPanel(
       helpText("Create demographic maps with information form the 2010 US Census."),
+      
       selectInput(
         "var",
         label = "Choose a variable to display",
@@ -16,6 +18,7 @@ shinyUI(fluidPage(
         ),
         selected = "Percent White"
       ),
+      
       sliderInput(
         "range",
         label = "Range of interest:",
@@ -24,6 +27,7 @@ shinyUI(fluidPage(
         value = c(0, 100)
       )
     ),
+    
     mainPanel()
   )
 ))
