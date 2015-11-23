@@ -1,7 +1,7 @@
 #ui.R
 
 shinyUI(fluidPage(
-  titlePanel("censusVis"),
+  titlePanel("censusVis v2"),
   
   sidebarLayout(
     sidebarPanel(
@@ -28,6 +28,9 @@ shinyUI(fluidPage(
       )
     ),
     
-    mainPanel()
+    mainPanel(
+      "cool",
+      textOutput("text1")
+    )
   )
 ))
