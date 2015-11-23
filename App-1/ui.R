@@ -1,59 +1,76 @@
-# ui.R
+#ui.R
 
 shinyUI(fluidPage(
-  titlePanel("My Shiny App"),
-  sidebarLayout(
-    sidebarPanel(
-      h1("Installation"),
-      p(
-        "Shiny is available in CRAN so you can install it the usual way from your..."
-      ),
-      code('install.packages("shiny")'),
-      br(),
-      br(),
-      br(),
-      br(),
-      img(
-        src = "bigorb.png",
-        height = 70,
-        width = 70
-      ),
-      "shiny is a product of",
-      a(href = "https://www.rstudio.com", "Rstudio", style = "color:green")
+  titlePanel("Basic widgets"),
+  
+  fluidRow(
+    
+    column(3,
+           h3("Buttons"),
+           actionButton("action", label = "Action"),
+           br(),
+           br(), 
+           submitButton("Submit")),
+    
+    column(3,
+           h3("Single checkbox"),
+           checkboxInput("checkbox", label = "Choice A", value = TRUE)),
+    
+    column(3, 
+           checkboxGroupInput("checkGroup", 
+                              label = h3("Checkbox group"), 
+                              choices = list("Choice 1" = 1, 
+                                             "Choice 2" = 2, "Choice 3" = 3),
+                              selected = 1)),
+    
+    column(3, 
+           dateInput("date", 
+                     label = h3("Date input"), 
+                     value = "2014-01-01"))   
+  ),
+  
+  fluidRow(
+    
+    column(3,
+           dateRangeInput("dates", label = h3("Date range"))),
+    
+    column(3,
+           fileInput("file", label = h3("File input"))),
+    
+    column(3, 
+           h3("Help text"),
+           helpText("Note: help text isn't a true widget,", 
+                    "but it provides an easy way to add text to",
+                    "accompany other widgets.")),
+    
+    column(3, 
+           numericInput("num", 
+                        label = h3("Numeric input"), 
+                        value = 1))   
+  ),
+  
+  fluidRow(
+    
+    column(3,
+           radioButtons("radio", label = h3("Radio buttons"),
+                        choices = list("Choice 1" = 1, "Choice 2" = 2,
+                                       "Choice 3" = 3),selected = 1)),
+    
+    column(3,
+           selectInput("select", label = h3("Select box"), 
+                       choices = list("Choice 1" = 1, "Choice 2" = 2,
+                                      "Choice 3" = 3), selected = 1)),
+    
+    column(3, 
+           sliderInput("slider1", label = h3("Sliders"),
+                       min = 0, max = 100, value = 50),
+           sliderInput("slider2", "",
+                       min = 0, max = 100, value = c(25, 75))
     ),
-    mainPanel(
-      h1("Introducing Shiny"),
-      p(
-        "Shiny is a new package from RStudio that makes it",
-        em("incredibly easy"),
-        "to build interactive web apps with R."
-      ),
-      br(),
-      p(
-        "For an introducation and live examples, visit the",
-        a(href = "https://www.rstudio.com", "Shiny homepage")
-      ),
-      br(),
-      h2("Features"),
-      tags$ul(
-        tags$li(
-          "Build useful web applications with only a few lines of code -- no JS required"
-        ),
-        tags$li(HTML(paste(
-          "E = mc", tags$sup(2), sep = ""
-        )),
-        HTML(paste(
-          "H", tags$sub(2), "0", sep = ""
-        )),
-        HTML(
-          paste("something ", tags$b("bold text "), sep = "", "so cool")
-        )),
-        tags$li(
-          "Shiny applications are automatically live in the way way that",
-          strong("spreadsheets"),
-          "are live. Outputs change instantly as users modify..."
-        )
-      )
-    )
+    
+    column(3, 
+           textInput("text", label = h3("Text input"), 
+                     value = "Enter text..."))   
   )
+  
 ))
