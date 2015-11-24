@@ -10,7 +10,7 @@ shinyUI(fluidPage(
         Information will be collected from yahoo finance."
       ),
       
-      textInput("symb", "Symbol", "SPY"),
+      textInput("symb", "Symbol", "TSLA"),
       
       dateRangeInput(
         "dates",
